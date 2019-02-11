@@ -1,0 +1,651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87065A552211058000F58185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A542211058000F58185 /* AppDelegate.swift */; };
+		87065A5A2211058000F58185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87065A582211058000F58185 /* Main.storyboard */; };
+		87065A5C2211058200F58185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87065A5B2211058200F58185 /* Assets.xcassets */; };
+		87065A5F2211058200F58185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87065A5D2211058200F58185 /* LaunchScreen.storyboard */; };
+		87065A6A2211058200F58185 /* MikadoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A692211058200F58185 /* MikadoTests.swift */; };
+		87065A752211058200F58185 /* MikadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A742211058200F58185 /* MikadoUITests.swift */; };
+		87065A84221118AF00F58185 /* DayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A82221118AF00F58185 /* DayTableViewController.swift */; };
+		87065A88221118CA00F58185 /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A86221118CA00F58185 /* TripTableViewController.swift */; };
+		87065A8B221118DC00F58185 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A8A221118DB00F58185 /* EventViewController.swift */; };
+		87065A9022111D6E00F58185 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A8F22111D6E00F58185 /* Trip.swift */; };
+		87065A9222111D7C00F58185 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A9122111D7C00F58185 /* Day.swift */; };
+		87065A9422111D8500F58185 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A9322111D8500F58185 /* Event.swift */; };
+		87065A992211420E00F58185 /* TripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A972211420E00F58185 /* TripCell.swift */; };
+		87065A9A2211420E00F58185 /* TripCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87065A982211420E00F58185 /* TripCell.xib */; };
+		87065A9D2211422F00F58185 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A9B2211422F00F58185 /* DayCell.swift */; };
+		87065A9E2211422F00F58185 /* DayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87065A9C2211422F00F58185 /* DayCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		87065A662211058200F58185 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87065A492211058000F58185 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87065A502211058000F58185;
+			remoteInfo = Mikado;
+		};
+		87065A712211058200F58185 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87065A492211058000F58185 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87065A502211058000F58185;
+			remoteInfo = Mikado;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87065A512211058000F58185 /* Mikado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mikado.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87065A542211058000F58185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		87065A592211058000F58185 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87065A5B2211058200F58185 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87065A5E2211058200F58185 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87065A602211058200F58185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87065A652211058200F58185 /* MikadoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MikadoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87065A692211058200F58185 /* MikadoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MikadoTests.swift; sourceTree = "<group>"; };
+		87065A6B2211058200F58185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87065A702211058200F58185 /* MikadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MikadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87065A742211058200F58185 /* MikadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MikadoUITests.swift; sourceTree = "<group>"; };
+		87065A762211058200F58185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87065A82221118AF00F58185 /* DayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTableViewController.swift; sourceTree = "<group>"; };
+		87065A86221118CA00F58185 /* TripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
+		87065A8A221118DB00F58185 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		87065A8F22111D6E00F58185 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		87065A9122111D7C00F58185 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		87065A9322111D8500F58185 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		87065A972211420E00F58185 /* TripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCell.swift; sourceTree = "<group>"; };
+		87065A982211420E00F58185 /* TripCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripCell.xib; sourceTree = "<group>"; };
+		87065A9B2211422F00F58185 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		87065A9C2211422F00F58185 /* DayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87065A4E2211058000F58185 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87065A622211058200F58185 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87065A6D2211058200F58185 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87065A482211058000F58185 = {
+			isa = PBXGroup;
+			children = (
+				87065A532211058000F58185 /* Mikado */,
+				87065A682211058200F58185 /* MikadoTests */,
+				87065A732211058200F58185 /* MikadoUITests */,
+				87065A522211058000F58185 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87065A522211058000F58185 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87065A512211058000F58185 /* Mikado.app */,
+				87065A652211058200F58185 /* MikadoTests.xctest */,
+				87065A702211058200F58185 /* MikadoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87065A532211058000F58185 /* Mikado */ = {
+			isa = PBXGroup;
+			children = (
+				87065A8E2211191200F58185 /* View */,
+				87065A8D2211190C00F58185 /* Model */,
+				87065A8C221118DF00F58185 /* Controller */,
+				87065A542211058000F58185 /* AppDelegate.swift */,
+				87065A5B2211058200F58185 /* Assets.xcassets */,
+				87065A602211058200F58185 /* Info.plist */,
+			);
+			path = Mikado;
+			sourceTree = "<group>";
+		};
+		87065A682211058200F58185 /* MikadoTests */ = {
+			isa = PBXGroup;
+			children = (
+				87065A692211058200F58185 /* MikadoTests.swift */,
+				87065A6B2211058200F58185 /* Info.plist */,
+			);
+			path = MikadoTests;
+			sourceTree = "<group>";
+		};
+		87065A732211058200F58185 /* MikadoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				87065A742211058200F58185 /* MikadoUITests.swift */,
+				87065A762211058200F58185 /* Info.plist */,
+			);
+			path = MikadoUITests;
+			sourceTree = "<group>";
+		};
+		87065A8C221118DF00F58185 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				87065A86221118CA00F58185 /* TripTableViewController.swift */,
+				87065A82221118AF00F58185 /* DayTableViewController.swift */,
+				87065A8A221118DB00F58185 /* EventViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		87065A8D2211190C00F58185 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87065A972211420E00F58185 /* TripCell.swift */,
+				87065A9B2211422F00F58185 /* DayCell.swift */,
+				87065A8F22111D6E00F58185 /* Trip.swift */,
+				87065A9122111D7C00F58185 /* Day.swift */,
+				87065A9322111D8500F58185 /* Event.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		87065A8E2211191200F58185 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				87065A582211058000F58185 /* Main.storyboard */,
+				87065A5D2211058200F58185 /* LaunchScreen.storyboard */,
+				87065A982211420E00F58185 /* TripCell.xib */,
+				87065A9C2211422F00F58185 /* DayCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87065A502211058000F58185 /* Mikado */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87065A792211058200F58185 /* Build configuration list for PBXNativeTarget "Mikado" */;
+			buildPhases = (
+				87065A4D2211058000F58185 /* Sources */,
+				87065A4E2211058000F58185 /* Frameworks */,
+				87065A4F2211058000F58185 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mikado;
+			productName = Mikado;
+			productReference = 87065A512211058000F58185 /* Mikado.app */;
+			productType = "com.apple.product-type.application";
+		};
+		87065A642211058200F58185 /* MikadoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87065A7C2211058200F58185 /* Build configuration list for PBXNativeTarget "MikadoTests" */;
+			buildPhases = (
+				87065A612211058200F58185 /* Sources */,
+				87065A622211058200F58185 /* Frameworks */,
+				87065A632211058200F58185 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87065A672211058200F58185 /* PBXTargetDependency */,
+			);
+			name = MikadoTests;
+			productName = MikadoTests;
+			productReference = 87065A652211058200F58185 /* MikadoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		87065A6F2211058200F58185 /* MikadoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87065A7F2211058200F58185 /* Build configuration list for PBXNativeTarget "MikadoUITests" */;
+			buildPhases = (
+				87065A6C2211058200F58185 /* Sources */,
+				87065A6D2211058200F58185 /* Frameworks */,
+				87065A6E2211058200F58185 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87065A722211058200F58185 /* PBXTargetDependency */,
+			);
+			name = MikadoUITests;
+			productName = MikadoUITests;
+			productReference = 87065A702211058200F58185 /* MikadoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87065A492211058000F58185 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Aziz Zaynutdinov";
+				TargetAttributes = {
+					87065A502211058000F58185 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					87065A642211058200F58185 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 87065A502211058000F58185;
+					};
+					87065A6F2211058200F58185 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 87065A502211058000F58185;
+					};
+				};
+			};
+			buildConfigurationList = 87065A4C2211058000F58185 /* Build configuration list for PBXProject "Mikado" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87065A482211058000F58185;
+			productRefGroup = 87065A522211058000F58185 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87065A502211058000F58185 /* Mikado */,
+				87065A642211058200F58185 /* MikadoTests */,
+				87065A6F2211058200F58185 /* MikadoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87065A4F2211058000F58185 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87065A9A2211420E00F58185 /* TripCell.xib in Resources */,
+				87065A5F2211058200F58185 /* LaunchScreen.storyboard in Resources */,
+				87065A5C2211058200F58185 /* Assets.xcassets in Resources */,
+				87065A9E2211422F00F58185 /* DayCell.xib in Resources */,
+				87065A5A2211058000F58185 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87065A632211058200F58185 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87065A6E2211058200F58185 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87065A4D2211058000F58185 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87065A992211420E00F58185 /* TripCell.swift in Sources */,
+				87065A9D2211422F00F58185 /* DayCell.swift in Sources */,
+				87065A9022111D6E00F58185 /* Trip.swift in Sources */,
+				87065A552211058000F58185 /* AppDelegate.swift in Sources */,
+				87065A9222111D7C00F58185 /* Day.swift in Sources */,
+				87065A8B221118DC00F58185 /* EventViewController.swift in Sources */,
+				87065A84221118AF00F58185 /* DayTableViewController.swift in Sources */,
+				87065A9422111D8500F58185 /* Event.swift in Sources */,
+				87065A88221118CA00F58185 /* TripTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87065A612211058200F58185 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87065A6A2211058200F58185 /* MikadoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87065A6C2211058200F58185 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87065A752211058200F58185 /* MikadoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87065A672211058200F58185 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87065A502211058000F58185 /* Mikado */;
+			targetProxy = 87065A662211058200F58185 /* PBXContainerItemProxy */;
+		};
+		87065A722211058200F58185 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87065A502211058000F58185 /* Mikado */;
+			targetProxy = 87065A712211058200F58185 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		87065A582211058000F58185 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87065A592211058000F58185 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		87065A5D2211058200F58185 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87065A5E2211058200F58185 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87065A772211058200F58185 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		87065A782211058200F58185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87065A7A2211058200F58185 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MM934V475K;
+				INFOPLIST_FILE = Mikado/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.Mikado;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87065A7B2211058200F58185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MM934V475K;
+				INFOPLIST_FILE = Mikado/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.Mikado;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		87065A7D2211058200F58185 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MM934V475K;
+				INFOPLIST_FILE = MikadoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.MikadoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mikado.app/Mikado";
+			};
+			name = Debug;
+		};
+		87065A7E2211058200F58185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MM934V475K;
+				INFOPLIST_FILE = MikadoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.MikadoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mikado.app/Mikado";
+			};
+			name = Release;
+		};
+		87065A802211058200F58185 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MM934V475K;
+				INFOPLIST_FILE = MikadoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.MikadoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mikado;
+			};
+			name = Debug;
+		};
+		87065A812211058200F58185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MM934V475K;
+				INFOPLIST_FILE = MikadoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.MikadoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mikado;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87065A4C2211058000F58185 /* Build configuration list for PBXProject "Mikado" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87065A772211058200F58185 /* Debug */,
+				87065A782211058200F58185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87065A792211058200F58185 /* Build configuration list for PBXNativeTarget "Mikado" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87065A7A2211058200F58185 /* Debug */,
+				87065A7B2211058200F58185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87065A7C2211058200F58185 /* Build configuration list for PBXNativeTarget "MikadoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87065A7D2211058200F58185 /* Debug */,
+				87065A7E2211058200F58185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87065A7F2211058200F58185 /* Build configuration list for PBXNativeTarget "MikadoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87065A802211058200F58185 /* Debug */,
+				87065A812211058200F58185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87065A492211058000F58185 /* Project object */;
+}
