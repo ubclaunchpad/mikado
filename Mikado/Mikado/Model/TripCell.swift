@@ -10,6 +10,9 @@ import UIKit
 
 class TripCell: UITableViewCell {
 
+    @IBOutlet weak var tripName: UILabel!
+    @IBOutlet weak var city: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,7 +26,8 @@ class TripCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+        tripName.text = "ABD"
+        city.image = UIImage(named: "seattle-destination")
         backgroundColor = .yellow
     }
     
