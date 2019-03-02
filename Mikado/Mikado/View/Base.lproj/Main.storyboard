@@ -36,11 +36,49 @@
                             <outlet property="delegate" destination="dYr-Ed-RlA" id="3zm-wy-8LK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Trips" id="EtF-j6-big"/>
+                    <navigationItem key="navigationItem" title="Trips" id="EtF-j6-big">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sQd-rS-qDk">
+                            <connections>
+                                <segue destination="yHe-4A-6ZS" kind="presentation" id="YxP-Ji-yZP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AFf-GM-sFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1190" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PTD-FD-K9e">
+            <objects>
+                <navigationController id="yHe-4A-6ZS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ALt-zW-NED">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zr3-aI-L2X" kind="relationship" relationship="rootViewController" id="o7d-eh-Yv3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GlF-p6-yx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474" y="797"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="h2r-tV-C1a">
+            <objects>
+                <viewController id="zr3-aI-L2X" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dLG-Jo-qX6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mE3-lb-3yR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Sm-1v-s8H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTy-Qi-ZVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1190" y="797"/>
         </scene>
         <!--Days-->
         <scene sceneID="gWu-kd-e6n">
