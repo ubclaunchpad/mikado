@@ -96,24 +96,61 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPr-q1-nqx">
+                                <rect key="frame" x="20" y="241" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nn6-KF-UzZ">
+                                <rect key="frame" x="20" y="276" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="updateDes:" destination="zr3-aI-L2X" eventType="editingDidEnd" id="j2a-im-jTa"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEC-EE-FRg">
+                                <rect key="frame" x="20" y="377" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="updateTripName:" destination="zr3-aI-L2X" eventType="editingDidEnd" id="7nN-5j-L5R"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Customized Trip Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKj-Sx-vFC">
+                                <rect key="frame" x="20" y="330" width="213" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hEV-aD-Z4F" firstAttribute="leading" secondItem="mE3-lb-3yR" secondAttribute="leading" constant="20" id="0ek-Bc-M9H"/>
                             <constraint firstItem="Dnr-v4-TtF" firstAttribute="leading" secondItem="mE3-lb-3yR" secondAttribute="leading" constant="20" id="F8I-tB-nIo"/>
+                            <constraint firstItem="CPr-q1-nqx" firstAttribute="top" secondItem="GuC-wF-7UL" secondAttribute="bottom" constant="20" id="HnR-0W-klF"/>
                             <constraint firstItem="hEV-aD-Z4F" firstAttribute="top" secondItem="mE3-lb-3yR" secondAttribute="top" constant="10" id="OTJ-na-crb"/>
                             <constraint firstItem="Dnr-v4-TtF" firstAttribute="top" secondItem="rFS-vO-xLM" secondAttribute="bottom" constant="15" id="QkW-rT-VJJ"/>
                             <constraint firstItem="rFS-vO-xLM" firstAttribute="leading" secondItem="mE3-lb-3yR" secondAttribute="leading" constant="20" id="RZ9-rb-mr9"/>
                             <constraint firstItem="rFS-vO-xLM" firstAttribute="top" secondItem="hEV-aD-Z4F" secondAttribute="bottom" constant="15" id="RgV-DP-O8L"/>
                             <constraint firstItem="GuC-wF-7UL" firstAttribute="leading" secondItem="mE3-lb-3yR" secondAttribute="leading" constant="20" id="UoJ-DW-WhS"/>
+                            <constraint firstItem="CPr-q1-nqx" firstAttribute="leading" secondItem="mE3-lb-3yR" secondAttribute="leading" constant="20" id="bzu-HC-cS8"/>
                             <constraint firstItem="GuC-wF-7UL" firstAttribute="top" secondItem="Dnr-v4-TtF" secondAttribute="bottom" constant="15" id="yfN-qv-9Ny"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mE3-lb-3yR"/>
                     </view>
                     <navigationItem key="navigationItem" id="0Sm-1v-s8H"/>
                     <connections>
+                        <outlet property="destination" destination="Nn6-KF-UzZ" id="cUt-ti-wlQ"/>
                         <outlet property="end_date" destination="GuC-wF-7UL" id="EhO-mZ-CQC"/>
                         <outlet property="start_date" destination="rFS-vO-xLM" id="sqW-Wg-hR1"/>
+                        <outlet property="trip_name" destination="YEC-EE-FRg" id="4pk-81-AuP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTy-Qi-ZVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
