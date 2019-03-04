@@ -15,6 +15,7 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var start_date: UITextField!
     @IBOutlet weak var destination: UITextField!
     @IBOutlet weak var trip_name: UITextField!
+    
     private var start_datepicker: UIDatePicker?
     private var end_datepicker: UIDatePicker?
     
@@ -41,14 +42,6 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
         start_date.inputView = start_datepicker
         end_date.inputView = end_datepicker
         
-        // loading text field delegate
-        destination.delegate = self
-        
-    }
-    
-    func textFieldShouldReturn(_ destination: UITextField) -> Bool {
-        destination.resignFirstResponder()
-        return true
     }
     
     @objc func viewtapped(gestureRecognizer:UITapGestureRecognizer){
@@ -77,23 +70,19 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    // doesn't work now
+    // update destination
     @IBAction func updateDes(_ sender: Any) {
         trip.update_destination(dataString: destination.text!)
         print(trip.destination)
         view.endEditing(true)
     }
     
-    // doesn't work either
+    // update trip title
     @IBAction func updateTripName(_ sender: Any) {
         trip.update_title(dataString: trip_name.text!)
         print(trip.title)
         view.endEditing(true)
     }
-    
-    
-    
-    
     
     /*
     // MARK: - Navigation
