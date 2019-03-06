@@ -10,21 +10,39 @@ import UIKit
 
 class AddTripViewController: UIViewController, UITextFieldDelegate {
     
+    // set up of a child of main view (UIscrollview)
+    @IBOutlet weak var scroll: UIScrollView!
     
+    // content view (child of UIscrollview)
+    @IBOutlet weak var content: UIView!
+    
+    // 4 text fields to update properties of a trip object
     @IBOutlet weak var end_date: UITextField!
     @IBOutlet weak var start_date: UITextField!
     @IBOutlet weak var destination: UITextField!
     @IBOutlet weak var trip_name: UITextField!
     
+    // completion of a trip object setup
+    @IBOutlet weak var submit: UIButton!
+    
+    // datepicker helper variables
     private var start_datepicker: UIDatePicker?
     private var end_datepicker: UIDatePicker?
-    
+
     // instantiate a trip object
     private var trip: Trip = Trip.init()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // set the size of the scroll view
+        scroll.contentSize = self.view.frame.size
+        
+        //observer of keyboard
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
         // loading the datepicker for user to select a date
         start_datepicker = UIDatePicker()
         start_datepicker?.datePickerMode = .date
@@ -38,10 +56,9 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
         let tap = UITapGestureRecognizer(target: self, action: #selector(AddTripViewController.viewtapped(gestureRecognizer:)))
         view.addGestureRecognizer(tap)
         
-        // date view set up
+        // date view setup
         start_date.inputView = start_datepicker
         end_date.inputView = end_datepicker
-        
     }
     
     @objc func viewtapped(gestureRecognizer:UITapGestureRecognizer){
@@ -84,6 +101,25 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
+    // adjust the screen size if keyboard will cover our text field
+    @objc func adjustForKeyboard(notification: Notification) {
+        let userInfo = notification.userInfo!
+        
+        let keyboardScreenEndFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+        
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            scroll.contentInset = UIEdgeInsets.zero
+        } else {
+            scroll.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height, right: 0)
+        }
+        
+        scroll.scrollIndicatorInsets = scroll.contentInset
+    }
+    
+    @IBAction func update_trip_array(_ sender: UIButton) {
+        
+    }
     /*
     // MARK: - Navigation
 
