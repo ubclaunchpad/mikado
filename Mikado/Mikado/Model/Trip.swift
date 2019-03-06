@@ -11,30 +11,30 @@ import Foundation
 class Trip {
     
      var title : String
-     var start_date : NSDate
-     var end_date : NSDate
+     var startDate : NSDate
+     var endDate : NSDate
      var destination : String
     
     init() {
         self.title = ""
-        self.start_date = NSDate()
-        self.end_date = NSDate()
+        self.startDate = NSDate()
+        self.endDate = NSDate()
         self.destination = ""
     }
     
-    func update_start_date(dateString : String){
-        self.start_date = NSDate(dateString: dateString)
+    func updateStartDate(dateString : String){
+        self.startDate = NSDate(dateString: dateString)
     }
     
-    func update_end_date(dateString : String){
-        self.end_date = NSDate(dateString: dateString)
+    func updateEndDate(dateString : String){
+        self.endDate = NSDate(dateString: dateString)
     }
     
-    func update_destination(dataString : String){
+    func updateDestination(dataString : String){
         self.destination = dataString
     }
     
-    func update_title(dataString : String){
+    func updateTitle(dataString : String){
         self.title = dataString
     }
 }

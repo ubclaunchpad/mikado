@@ -151,7 +151,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Submit"/>
                                                         <connections>
-                                                            <action selector="update_trip_array:" destination="zr3-aI-L2X" eventType="touchUpInside" id="sS6-Ns-jTl"/>
+                                                            <action selector="updateTrip:" destination="zr3-aI-L2X" eventType="touchUpInside" id="PaV-Lv-Qva"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

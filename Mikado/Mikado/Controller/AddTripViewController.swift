@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class AddTripViewController: UIViewController, UITextFieldDelegate {
     
@@ -17,17 +18,17 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var content: UIView!
     
     // 4 text fields to update properties of a trip object
-    @IBOutlet weak var end_date: UITextField!
-    @IBOutlet weak var start_date: UITextField!
+    @IBOutlet weak var endDate: UITextField!
+    @IBOutlet weak var startDate: UITextField!
     @IBOutlet weak var destination: UITextField!
-    @IBOutlet weak var trip_name: UITextField!
+    @IBOutlet weak var tripName: UITextField!
     
     // completion of a trip object setup
     @IBOutlet weak var submit: UIButton!
     
     // datepicker helper variables
-    private var start_datepicker: UIDatePicker?
-    private var end_datepicker: UIDatePicker?
+    private var startDatepicker: UIDatePicker?
+    private var endDatepicker: UIDatePicker?
 
     // instantiate a trip object
     private var trip: Trip = Trip.init()
@@ -44,59 +45,59 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         
         // loading the datepicker for user to select a date
-        start_datepicker = UIDatePicker()
-        start_datepicker?.datePickerMode = .date
-        start_datepicker?.addTarget(self, action: #selector(AddTripViewController.startdatechanged(datepicker:)), for: .valueChanged)
+        startDatepicker = UIDatePicker()
+        startDatepicker?.datePickerMode = .date
+        startDatepicker?.addTarget(self, action: #selector(AddTripViewController.startDateChanged), for: .valueChanged)
         
-        end_datepicker = UIDatePicker()
-        end_datepicker?.datePickerMode = .date
-        end_datepicker?.addTarget(self, action: #selector(AddTripViewController.enddatechanged(datepicker:)), for: .valueChanged)
+        endDatepicker = UIDatePicker()
+        endDatepicker?.datePickerMode = .date
+        endDatepicker?.addTarget(self, action: #selector(AddTripViewController.endDateChanged), for: .valueChanged)
         
         // tap gesture
-        let tap = UITapGestureRecognizer(target: self, action: #selector(AddTripViewController.viewtapped(gestureRecognizer:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(AddTripViewController.viewTapped))
         view.addGestureRecognizer(tap)
         
         // date view setup
-        start_date.inputView = start_datepicker
-        end_date.inputView = end_datepicker
+        startDate.inputView = startDatepicker
+        endDate.inputView = endDatepicker
     }
     
-    @objc func viewtapped(gestureRecognizer:UITapGestureRecognizer){
+    @objc func viewTapped(gestureRecognizer:UITapGestureRecognizer){
         view.endEditing(true)
     }
     
     // update start date in our trip object
-    @objc func startdatechanged(datepicker:UIDatePicker){
+    @objc func startDateChanged(datepicker:UIDatePicker){
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MMM-yyyy"
-        let startDateString : String = formatter.string(from: start_datepicker!.date)
-        start_date.text = startDateString
-        trip.update_start_date(dateString: startDateString)
-        print(trip.start_date)
+        let startDateString : String = formatter.string(from: startDatepicker!.date)
+        startDate.text = startDateString
+        //trip.startDate = NSDate(dataString: startDateString)
+        print(trip.startDate)
         view.endEditing(true)
     }
     
     // update end date in our trip object
-    @objc func enddatechanged(datepicker:UIDatePicker){
+    @objc func endDateChanged(datepicker:UIDatePicker){
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MMM-yyyy"
-        let endDateString : String = formatter.string(from: end_datepicker!.date)
-        end_date.text = endDateString
-        trip.update_end_date(dateString: endDateString)
-        print(trip.end_date)
+        let endDateString : String = formatter.string(from: endDatepicker!.date)
+        endDate.text = endDateString
+        trip.updateEndDate(dateString: endDateString)
+        print(trip.endDate)
         view.endEditing(true)
     }
     
     // update destination
     @IBAction func updateDes(_ sender: Any) {
-        trip.update_destination(dataString: destination.text!)
+        trip.updateDestination(dataString: destination.text!)
         print(trip.destination)
         view.endEditing(true)
     }
     
     // update trip title
     @IBAction func updateTripName(_ sender: Any) {
-        trip.update_title(dataString: trip_name.text!)
+        trip.updateTitle(dataString: tripName.text!)
         print(trip.title)
         view.endEditing(true)
     }
@@ -117,8 +118,7 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
         scroll.scrollIndicatorInsets = scroll.contentInset
     }
     
-    @IBAction func update_trip_array(_ sender: UIButton) {
-        
+    @IBAction func updateTrip(_ sender: UIButton) {
     }
     /*
     // MARK: - Navigation
@@ -131,3 +131,5 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
     */
 
 }
+
+
