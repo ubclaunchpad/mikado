@@ -30,13 +30,6 @@ class Trip {
         self.endDate = NSDate(dateString: dateString)
     }
     
-    func updateDestination(dataString : String){
-        self.destination = dataString
-    }
-    
-    func updateTitle(dataString : String){
-        self.title = dataString
-    }
 }
 
 // pass in the string as the format of "dd-MMM-yyyy", will set up a new NSDate object

@@ -169,11 +169,11 @@
                     <connections>
                         <outlet property="content" destination="vYW-ui-DbX" id="JDi-kf-Ihj"/>
                         <outlet property="destination" destination="Nn6-KF-UzZ" id="cUt-ti-wlQ"/>
-                        <outlet property="end_date" destination="GuC-wF-7UL" id="EhO-mZ-CQC"/>
+                        <outlet property="endDate" destination="GuC-wF-7UL" id="EhO-mZ-CQC"/>
                         <outlet property="scroll" destination="lf7-O2-bFg" id="DdG-pX-RRp"/>
-                        <outlet property="start_date" destination="rFS-vO-xLM" id="sqW-Wg-hR1"/>
+                        <outlet property="startDate" destination="rFS-vO-xLM" id="sqW-Wg-hR1"/>
                         <outlet property="submit" destination="ago-E2-sAU" id="CWl-5S-emq"/>
-                        <outlet property="trip_name" destination="YEC-EE-FRg" id="4pk-81-AuP"/>
+                        <outlet property="tripName" destination="YEC-EE-FRg" id="4pk-81-AuP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTy-Qi-ZVv" userLabel="First Responder" sceneMemberID="firstResponder"/>

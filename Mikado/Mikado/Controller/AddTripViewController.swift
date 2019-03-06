@@ -90,14 +90,14 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
     
     // update destination
     @IBAction func updateDes(_ sender: Any) {
-        trip.updateDestination(dataString: destination.text!)
+        trip.destination = destination.text!
         print(trip.destination)
         view.endEditing(true)
     }
     
     // update trip title
     @IBAction func updateTripName(_ sender: Any) {
-        trip.updateTitle(dataString: tripName.text!)
+        trip.title = tripName.text!
         print(trip.title)
         view.endEditing(true)
     }
@@ -120,6 +120,8 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func updateTrip(_ sender: UIButton) {
     }
+    
+    
     /*
     // MARK: - Navigation
 
