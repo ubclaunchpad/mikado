@@ -18,18 +18,19 @@ class TripTableViewController: UITableViewController {
         setupTrips()
         self.navigationItem.title = "Trips"
         
-        tableView.register(TripCell.self, forCellReuseIdentifier: "tripCell")
+        tableView.register(UINib(nibName: "TripCell", bundle: nil), forCellReuseIdentifier: "tripCell")
         tableView.tableFooterView = UIView()
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tripCell = tableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath)
+        let tripCell = tableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath) as! TripCell
         
         let trip = trips?[indexPath.row]
-
-        tripCell.textLabel?.text = trip?.title
+        
+        tripCell.cityImage.image = UIImage(named: "seattle-destination")
+        tripCell.tripName.text = trip?.title
         
         return tripCell
     }
@@ -39,6 +40,10 @@ class TripTableViewController: UITableViewController {
             return count
         }
         return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

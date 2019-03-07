@@ -9,13 +9,14 @@
 import UIKit
 
 class TripCell: UITableViewCell {
-
-    @IBOutlet weak var tripName: UILabel!
-    @IBOutlet weak var city: UIImageView!
     
+    @IBOutlet weak var cityImage: UIImageView!
+    @IBOutlet weak var tripName: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,13 +27,11 @@ class TripCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        tripName.text = "ABD"
-        city.image = UIImage(named: "seattle-destination")
-        backgroundColor = .yellow
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        //fatalError("init(coder:) has not been implemented")
     }
     
 }
