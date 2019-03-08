@@ -16,7 +16,9 @@ class TripCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        self.layer.borderWidth = 1
+        self.layer.cornerRadius = 4
+        self.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

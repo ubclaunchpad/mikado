@@ -30,9 +30,6 @@ class TripTableViewController: UITableViewController {
         let trip = trips?[indexPath.section]
         tripCell.setImage(UIImage(named: "seattle-destination")!)
         tripCell.setLabel((trip?.title)!)
-        tripCell.layer.borderWidth = 1
-        tripCell.layer.cornerRadius = 4
-        tripCell.clipsToBounds = true
         return tripCell
     }
     
@@ -63,7 +60,9 @@ class TripTableViewController: UITableViewController {
     
     func setupTrips() {
         let trip1 = Trip()
+        trip1.title = "TRIP1"
         let trip2 = Trip()
+        trip2.title = "TRIP2"
         trips = [trip1, trip2]
     }
     
