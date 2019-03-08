@@ -34,4 +34,23 @@ class TripCell: UITableViewCell {
         //fatalError("init(coder:) has not been implemented")
     }
     
+    func setLabel (_ name: String) {
+        tripName.text = name
+        tripName.textColor = .white
+        tripName.font = UIFont.systemFont(ofSize: 20.0)
+    }
+    
+    func setImage (_ im : UIImage) {
+        // set image
+        cityImage.image = im
+        cityImage.layer.opacity = 0.9
+        
+        // dim the image
+        let coverLayer = CALayer()
+        coverLayer.frame = self.bounds;
+        coverLayer.backgroundColor = UIColor.black.cgColor
+        coverLayer.opacity = 0.5
+        cityImage.layer.addSublayer(coverLayer)
+    }
+    
 }

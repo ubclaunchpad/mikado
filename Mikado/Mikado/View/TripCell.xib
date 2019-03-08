@@ -19,35 +19,29 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cib-3P-eSF">
-                        <rect key="frame" x="0.0" y="22.5" width="42" height="21"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BBM-PO-BJB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llr-eI-cio">
+                        <rect key="frame" x="3" y="19.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2nH-X8-Jfp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
-                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="2nH-X8-Jfp" secondAttribute="trailing" id="6Fn-w4-lyG"/>
-                    <constraint firstAttribute="bottom" secondItem="cib-3P-eSF" secondAttribute="bottom" id="87F-Gc-BBz"/>
-                    <constraint firstItem="2nH-X8-Jfp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HY3-Fy-NQn"/>
-                    <constraint firstItem="cib-3P-eSF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LGp-Dq-zRO"/>
-                    <constraint firstItem="cib-3P-eSF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PM6-wE-VNf"/>
-                    <constraint firstItem="2nH-X8-Jfp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TiA-Al-fBG"/>
-                    <constraint firstItem="cib-3P-eSF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VT8-Y6-KLG"/>
-                    <constraint firstAttribute="bottom" secondItem="cib-3P-eSF" secondAttribute="bottom" id="WXT-kw-A3y"/>
-                    <constraint firstAttribute="bottom" secondItem="cib-3P-eSF" secondAttribute="bottom" id="ZFM-7n-nlG"/>
-                    <constraint firstItem="cib-3P-eSF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="c25-se-EiL"/>
-                    <constraint firstAttribute="bottom" secondItem="2nH-X8-Jfp" secondAttribute="bottom" id="ug1-yZ-1z2"/>
-                    <constraint firstAttribute="bottom" secondItem="cib-3P-eSF" secondAttribute="bottom" id="xVW-lO-8vH"/>
+                    <constraint firstItem="Llr-eI-cio" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="3" id="40Y-Xl-SsV"/>
+                    <constraint firstAttribute="bottom" secondItem="BBM-PO-BJB" secondAttribute="bottom" id="KD4-1G-ob4"/>
+                    <constraint firstAttribute="bottom" secondItem="Llr-eI-cio" secondAttribute="bottom" constant="3" id="ZLq-7t-Bdc"/>
+                    <constraint firstItem="BBM-PO-BJB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hA4-Zk-R0d"/>
+                    <constraint firstAttribute="trailing" secondItem="BBM-PO-BJB" secondAttribute="trailing" id="xKL-wI-DcM"/>
+                    <constraint firstItem="BBM-PO-BJB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yg6-g8-mXz"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cityImage" destination="2nH-X8-Jfp" id="ceq-xa-CUm"/>
-                <outlet property="tripName" destination="cib-3P-eSF" id="PXK-s1-r9X"/>
+                <outlet property="cityImage" destination="BBM-PO-BJB" id="p2B-B2-nix"/>
+                <outlet property="tripName" destination="Llr-eI-cio" id="DZJ-vd-a4s"/>
             </connections>
             <point key="canvasLocation" x="124.8" y="48.575712143928037"/>
         </tableViewCell>

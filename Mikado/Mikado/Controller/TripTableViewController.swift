@@ -27,23 +27,32 @@ class TripTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tripCell = tableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath) as! TripCell
         
-        let trip = trips?[indexPath.row]
-        
-        tripCell.cityImage.image = UIImage(named: "seattle-destination")
-        tripCell.tripName.text = trip?.title
-        
+        let trip = trips?[indexPath.section]
+        tripCell.setImage(UIImage(named: "seattle-destination")!)
+        tripCell.setLabel((trip?.title)!)
+        tripCell.layer.borderWidth = 1
+        tripCell.layer.cornerRadius = 4
+        tripCell.clipsToBounds = true
         return tripCell
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         if let count = trips?.count {
             return count
         }
         return 0
     }
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20;
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 100
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
