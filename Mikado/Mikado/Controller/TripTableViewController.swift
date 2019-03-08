@@ -62,8 +62,8 @@ class TripTableViewController: UITableViewController {
     // MARK: - Populate the array of trips
     
     func setupTrips() {
-        let trip1 = Trip(title: "Trip1")
-        let trip2 = Trip(title: "Trip2")
+        let trip1 = Trip()
+        let trip2 = Trip()
         trips = [trip1, trip2]
     }
     
