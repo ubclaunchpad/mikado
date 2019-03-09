@@ -42,7 +42,7 @@ class TripTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDay", sender: self)
+        performSegue(withIdentifier: "showDays", sender: self)
     }
     
     // MARK: - Populate the array of trips

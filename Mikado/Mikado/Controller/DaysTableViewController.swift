@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DayTableViewController: UITableViewController {
+class DaysTableViewController: UITableViewController {
     
     var dates : [Day]?
     
@@ -42,7 +42,7 @@ class DayTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showEvent", sender: self)
+        performSegue(withIdentifier: "showDay", sender: self)
     }
     
     // MARK: - Populate the array of trips
