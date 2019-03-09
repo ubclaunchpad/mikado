@@ -10,15 +10,19 @@
 		5F152E56222B13D000F4EF79 /* TADataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F152E55222B13D000F4EF79 /* TADataSource.swift */; };
 		5F152E58222B145800F4EF79 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F152E57222B145800F4EF79 /* AddTripViewController.swift */; };
 		5FA2F2AB2234518500E35B5B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA2F2AA2234518500E35B5B /* Place.swift */; };
+		5FA2F2AD223471BD00E35B5B /* DayTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA2F2AC223471BD00E35B5B /* DayTableViewController.storyboard */; };
+		5FA2F2AF2234726300E35B5B /* DayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA2F2AE2234726300E35B5B /* DayViewController.storyboard */; };
+		5FA2F2B1223472AE00E35B5B /* EventDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA2F2B0223472AE00E35B5B /* EventDetailViewController.storyboard */; };
+		5FA2F2B3223472E400E35B5B /* AddTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA2F2B2223472E400E35B5B /* AddTripViewController.storyboard */; };
 		87065A552211058000F58185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A542211058000F58185 /* AppDelegate.swift */; };
 		87065A5A2211058000F58185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87065A582211058000F58185 /* Main.storyboard */; };
 		87065A5C2211058200F58185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87065A5B2211058200F58185 /* Assets.xcassets */; };
 		87065A5F2211058200F58185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87065A5D2211058200F58185 /* LaunchScreen.storyboard */; };
 		87065A6A2211058200F58185 /* MikadoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A692211058200F58185 /* MikadoTests.swift */; };
 		87065A752211058200F58185 /* MikadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A742211058200F58185 /* MikadoUITests.swift */; };
-		87065A84221118AF00F58185 /* DayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A82221118AF00F58185 /* DayTableViewController.swift */; };
+		87065A84221118AF00F58185 /* DaysTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A82221118AF00F58185 /* DaysTableViewController.swift */; };
 		87065A88221118CA00F58185 /* TripTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A86221118CA00F58185 /* TripTableViewController.swift */; };
-		87065A8B221118DC00F58185 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A8A221118DB00F58185 /* EventViewController.swift */; };
+		87065A8B221118DC00F58185 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A8A221118DB00F58185 /* DayViewController.swift */; };
 		87065A9022111D6E00F58185 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A8F22111D6E00F58185 /* Trip.swift */; };
 		87065A9222111D7C00F58185 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A9122111D7C00F58185 /* Day.swift */; };
 		87065A9422111D8500F58185 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A9322111D8500F58185 /* Event.swift */; };
@@ -49,6 +53,10 @@
 		5F152E55222B13D000F4EF79 /* TADataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TADataSource.swift; sourceTree = "<group>"; };
 		5F152E57222B145800F4EF79 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		5FA2F2AA2234518500E35B5B /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		5FA2F2AC223471BD00E35B5B /* DayTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DayTableViewController.storyboard; sourceTree = "<group>"; };
+		5FA2F2AE2234726300E35B5B /* DayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DayViewController.storyboard; sourceTree = "<group>"; };
+		5FA2F2B0223472AE00E35B5B /* EventDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventDetailViewController.storyboard; sourceTree = "<group>"; };
+		5FA2F2B2223472E400E35B5B /* AddTripViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTripViewController.storyboard; sourceTree = "<group>"; };
 		87065A512211058000F58185 /* Mikado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mikado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87065A542211058000F58185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87065A592211058000F58185 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,9 +69,9 @@
 		87065A702211058200F58185 /* MikadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MikadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87065A742211058200F58185 /* MikadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MikadoUITests.swift; sourceTree = "<group>"; };
 		87065A762211058200F58185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87065A82221118AF00F58185 /* DayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTableViewController.swift; sourceTree = "<group>"; };
+		87065A82221118AF00F58185 /* DaysTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysTableViewController.swift; sourceTree = "<group>"; };
 		87065A86221118CA00F58185 /* TripTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewController.swift; sourceTree = "<group>"; };
-		87065A8A221118DB00F58185 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		87065A8A221118DB00F58185 /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
 		87065A8F22111D6E00F58185 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		87065A9122111D7C00F58185 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		87065A9322111D8500F58185 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -154,8 +162,8 @@
 			children = (
 				87065A86221118CA00F58185 /* TripTableViewController.swift */,
 				5F152E57222B145800F4EF79 /* AddTripViewController.swift */,
-				87065A82221118AF00F58185 /* DayTableViewController.swift */,
-				87065A8A221118DB00F58185 /* EventViewController.swift */,
+				87065A82221118AF00F58185 /* DaysTableViewController.swift */,
+				87065A8A221118DB00F58185 /* DayViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +186,10 @@
 			isa = PBXGroup;
 			children = (
 				87065A582211058000F58185 /* Main.storyboard */,
+				5FA2F2B2223472E400E35B5B /* AddTripViewController.storyboard */,
+				5FA2F2AC223471BD00E35B5B /* DayTableViewController.storyboard */,
+				5FA2F2AE2234726300E35B5B /* DayViewController.storyboard */,
+				5FA2F2B0223472AE00E35B5B /* EventDetailViewController.storyboard */,
 				87065A5D2211058200F58185 /* LaunchScreen.storyboard */,
 				87065A982211420E00F58185 /* TripCell.xib */,
 				87065A9C2211422F00F58185 /* DayCell.xib */,
@@ -290,10 +302,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				87065A9A2211420E00F58185 /* TripCell.xib in Resources */,
+				5FA2F2AF2234726300E35B5B /* DayViewController.storyboard in Resources */,
+				5FA2F2AD223471BD00E35B5B /* DayTableViewController.storyboard in Resources */,
+				5FA2F2B3223472E400E35B5B /* AddTripViewController.storyboard in Resources */,
 				87065A5F2211058200F58185 /* LaunchScreen.storyboard in Resources */,
 				87065A5C2211058200F58185 /* Assets.xcassets in Resources */,
 				87065A9E2211422F00F58185 /* DayCell.xib in Resources */,
 				87065A5A2211058000F58185 /* Main.storyboard in Resources */,
+				5FA2F2B1223472AE00E35B5B /* EventDetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,8 +340,8 @@
 				5FA2F2AB2234518500E35B5B /* Place.swift in Sources */,
 				87065A552211058000F58185 /* AppDelegate.swift in Sources */,
 				87065A9222111D7C00F58185 /* Day.swift in Sources */,
-				87065A8B221118DC00F58185 /* EventViewController.swift in Sources */,
-				87065A84221118AF00F58185 /* DayTableViewController.swift in Sources */,
+				87065A8B221118DC00F58185 /* DayViewController.swift in Sources */,
+				87065A84221118AF00F58185 /* DaysTableViewController.swift in Sources */,
 				5F152E58222B145800F4EF79 /* AddTripViewController.swift in Sources */,
 				87065A9422111D8500F58185 /* Event.swift in Sources */,
 				87065A88221118CA00F58185 /* TripTableViewController.swift in Sources */,

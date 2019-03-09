@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XCb-0C-545">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Events-->
+        <scene sceneID="rxU-eO-XKL">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yo4-fu-9Da" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Events" id="XCb-0C-545" customClass="DayViewController" customModule="Mikado" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H3K-jy-Apz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="leg-eU-0j3"/>
+                    </view>
+                    <connections>
+                        <segue destination="b6I-6r-P87" kind="show" identifier="showEventDetail" id="Dj2-WD-0OR"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2768.8000000000002" y="132.68365817091455"/>
+        </scene>
+        <!--EventDetailViewController-->
+        <scene sceneID="73l-GM-GgV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EventDetailViewController" id="b6I-6r-P87" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="34V-6j-Hnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3484" y="132"/>
+        </scene>
+    </scenes>
+</document>

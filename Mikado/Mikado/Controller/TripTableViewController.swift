@@ -42,14 +42,15 @@ class TripTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDay", sender: self)
+        performSegue(withIdentifier: "showDays", sender: self)
     }
     
     // MARK: - Populate the array of trips
     
     func setupTrips() {
-        let trip1 = Trip(title: "Trip1")
-        let trip2 = Trip(title: "Trip2")
+        let samplePlace = Place(name: "San Francisco", coordinates: nil)
+        let trip1 = Trip(title: "Trip1", startDate: Date(), endDate: Date(), destination: samplePlace, days: [])
+        let trip2 = Trip(title: "Trip2", startDate: Date(), endDate: Date(), destination: samplePlace, days: [])
         trips = [trip1, trip2]
     }
     

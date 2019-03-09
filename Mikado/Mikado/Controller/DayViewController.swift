@@ -8,12 +8,12 @@
 
 import UIKit
 
-class EventViewController: UIViewController {
+class DayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Events"
+        self.navigationItem.title = "Day of February 20th"
     }
     
 
