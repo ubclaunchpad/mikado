@@ -11,5 +11,5 @@ import MapKit
 
 struct Place {
     var name: String
-    var coordinates: CLLocation
+    var coordinates: CLLocation?
 }
