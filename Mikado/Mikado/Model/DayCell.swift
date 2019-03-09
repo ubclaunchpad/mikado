@@ -16,6 +16,8 @@ class DayCell: UITableViewCell {
     var dateView : UITextView  = {
         var textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
+        textView.isScrollEnabled = false
+        textView.backgroundColor = UIColor.clear
         return textView
     }()
     
@@ -42,16 +44,19 @@ class DayCell: UITableViewCell {
         
         self.addSubview(dayImageView)
         self.addSubview(dateView)
-        
+        self.bringSubviewToFront(dateView)
         dayImageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         dayImageView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         dayImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         dayImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         
-        dateView.leftAnchor.constraint(equalTo: self.dayImageView.rightAnchor).isActive = true
-        dateView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
-        dateView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        dateView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        
+        
+//        dateView.leftAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+//
+//        dateView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+//        dateView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+//        dateView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         
         //backgroundColor = .orange
     }

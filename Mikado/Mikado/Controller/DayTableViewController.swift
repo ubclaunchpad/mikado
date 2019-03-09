@@ -22,14 +22,17 @@ class DayTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //setupTrips()
+        setupTrips()
         self.navigationItem.title = "Days"
+        
+        
         
         tableView.register(DayCell.self, forCellReuseIdentifier: "dayCell")
         tableView.tableFooterView = UIView()
-        
-        dayData = [DayCellData.init(image: <#T##UIImage?#>, date: "place")]
-        
+        dayData = [DayCellData.init(image: UIImage(named: "seattle-destination")!, date: "place"), DayCellData.init(image: UIImage(named: "seattle-destination")!, date: "place"), DayCellData.init(image: UIImage(named: "seattle-destination")!, date: "place"), DayCellData.init(image: UIImage(named: "seattle-destination")!, date: "place"), DayCellData.init(image: UIImage(named: "seattle-destination")!, date: "place"),DayCellData.init(image: UIImage(named: "seattle-destination")!, date: "place")]
+        tableView.rowHeight = 200
+        //tableView.rowHeight = UITableView.automaticDimension
+        //tableView.estimatedRowHeight = 700
         
         
         
@@ -39,21 +42,22 @@ class DayTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let dayCell = tableView.dequeueReusableCell(withIdentifier: "dayCell") as! DayCell
-       // dayCell.detailTextLabel =
-        // let day = dates?[indexPath.row]
-        //dayCell.textLabel?.text = "testing"
+
+        //         let day = dates?[indexPath.row]
+        //        dayCell.textLabel?.text = day?.title
+    
         dayCell.dayImage = dayData[indexPath.row].image
         dayCell.date = dayData[indexPath.row].date
-        //dayCell.textLabel?.text = day?.title
+
         
         return dayCell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = dates?.count {
-            return count
-        }
-        return 0
+//        if let count = dates?.count {
+//            return count
+//        }
+        return dayData.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
