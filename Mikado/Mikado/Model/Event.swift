@@ -8,11 +8,11 @@
 
 import Foundation
 
-class Event {
-    
-    let title : String
-    
-    init(title : String) {
-        self.title = title
-    }
+struct Event {
+    var title: String
+    var location: Place
+    var rating: Double
+    var description: String
+    var imageURL: URL
+    var suggestedDuration: Range<Double>
 }
