@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5F152E56222B13D000F4EF79 /* TADataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F152E55222B13D000F4EF79 /* TADataSource.swift */; };
 		5F152E58222B145800F4EF79 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F152E57222B145800F4EF79 /* AddTripViewController.swift */; };
+		5FA2F2AB2234518500E35B5B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA2F2AA2234518500E35B5B /* Place.swift */; };
 		87065A552211058000F58185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A542211058000F58185 /* AppDelegate.swift */; };
 		87065A5A2211058000F58185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87065A582211058000F58185 /* Main.storyboard */; };
 		87065A5C2211058200F58185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87065A5B2211058200F58185 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		5F152E55222B13D000F4EF79 /* TADataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TADataSource.swift; sourceTree = "<group>"; };
 		5F152E57222B145800F4EF79 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
+		5FA2F2AA2234518500E35B5B /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		87065A512211058000F58185 /* Mikado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mikado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87065A542211058000F58185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87065A592211058000F58185 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				87065A972211420E00F58185 /* TripCell.swift */,
 				87065A9B2211422F00F58185 /* DayCell.swift */,
 				87065A8F22111D6E00F58185 /* Trip.swift */,
+				5FA2F2AA2234518500E35B5B /* Place.swift */,
 				87065A9122111D7C00F58185 /* Day.swift */,
 				87065A9322111D8500F58185 /* Event.swift */,
 				5F152E55222B13D000F4EF79 /* TADataSource.swift */,
@@ -318,6 +321,7 @@
 				87065A992211420E00F58185 /* TripCell.swift in Sources */,
 				87065A9D2211422F00F58185 /* DayCell.swift in Sources */,
 				87065A9022111D6E00F58185 /* Trip.swift in Sources */,
+				5FA2F2AB2234518500E35B5B /* Place.swift in Sources */,
 				87065A552211058000F58185 /* AppDelegate.swift in Sources */,
 				87065A9222111D7C00F58185 /* Day.swift in Sources */,
 				87065A8B221118DC00F58185 /* EventViewController.swift in Sources */,
@@ -501,7 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MM934V475K;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Mikado/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -519,7 +523,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MM934V475K;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Mikado/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
