@@ -21,9 +21,9 @@ class TripTableViewController: UITableViewController {
         tableView.register(UINib(nibName: "TripCell", bundle: nil), forCellReuseIdentifier: "tripCell")
         tableView.tableFooterView = UIView()
     }
-    
+
     // MARK: - Table view data source
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let tripCell = tableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath) as! TripCell
         
