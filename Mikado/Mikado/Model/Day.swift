@@ -8,11 +8,13 @@
 
 import Foundation
 
-class Day {
-    
-    let title : String
-    
-    init(title : String) {
-        self.title = title
-    }
+struct Day {
+    var date: Date
+    var events: [ScheduledEvent]
+}
+
+struct ScheduledEvent {
+    var event: Event
+    var beginTime: Date
+    var endTime: Date
 }

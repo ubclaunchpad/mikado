@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uk5-g5-phc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Days-->
+        <scene sceneID="YzM-cZ-Uru">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hv4-OD-iHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController title="Days" id="Uk5-g5-phc" customClass="DaysTableViewController" customModule="Mikado" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pnL-H3-ARb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Uk5-g5-phc" id="B3X-4I-eeB"/>
+                            <outlet property="delegate" destination="Uk5-g5-phc" id="Kav-EP-QSJ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="pqP-aw-zdS" kind="show" identifier="showDay" id="YPL-es-X4m"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1990" y="133"/>
+        </scene>
+        <!--DayViewController-->
+        <scene sceneID="26n-6A-cPN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DayViewController" id="pqP-aw-zdS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="558-do-5tG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2617" y="132"/>
+        </scene>
+    </scenes>
+</document>

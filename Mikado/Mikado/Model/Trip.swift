@@ -8,11 +8,10 @@
 
 import Foundation
 
-class Trip {
-    
-    let title : String
-    
-    init(title : String) {
-        self.title = title
-    }
+struct Trip {
+    var title: String
+    var startDate: Date
+    var endDate: Date
+    var destination: Place
+    var days: [Day]
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DayTableViewController: UITableViewController {
+class DaysTableViewController: UITableViewController {
     
     var dates : [Day]?
     
@@ -29,7 +29,7 @@ class DayTableViewController: UITableViewController {
         
         let day = dates?[indexPath.row]
         
-        dayCell.textLabel?.text = day?.title
+        dayCell.textLabel?.text = day?.date.description
         
         return dayCell
     }
@@ -42,14 +42,14 @@ class DayTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showEvent", sender: self)
+        performSegue(withIdentifier: "showDay", sender: self)
     }
     
     // MARK: - Populate the array of trips
     
     func setupTrips() {
-        let day1 = Day(title: "Day1")
-        let day2 = Day(title: "Day2")
+        let day1 = Day(date: Date(), events: [])
+        let day2 = Day(date: Date(), events: [])
         dates = [day1, day2]
     }
 }
