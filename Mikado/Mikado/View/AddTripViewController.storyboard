@@ -33,14 +33,108 @@
                     <view key="view" contentMode="scaleToFill" id="Wvc-0O-fuL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fh-zf-AlF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AKr-Bt-QpD">
+                                        <rect key="frame" x="8" y="0.0" width="359" height="296"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DND-29-GNf">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick a start date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zFg-wc-R5R">
+                                                <rect key="frame" x="0.0" y="28.5" width="359" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5b-LW-7nu">
+                                                <rect key="frame" x="0.0" y="66.5" width="359" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pick an end date" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="44d-7e-rMk">
+                                                <rect key="frame" x="0.0" y="95" width="359" height="30"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81o-bO-wIJ">
+                                                <rect key="frame" x="0.0" y="133" width="359" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lZY-Ve-4Zp">
+                                                <rect key="frame" x="0.0" y="161.5" width="359" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="updateDes:" destination="o3V-D5-l2B" eventType="editingDidEnd" id="mOX-Yy-Z12"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Customized Trip Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6j4-cN-fm8">
+                                                <rect key="frame" x="0.0" y="199.5" width="359" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F7p-vh-6Xy">
+                                                <rect key="frame" x="0.0" y="228" width="359" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="updateTripName:" destination="o3V-D5-l2B" eventType="editingDidEnd" id="Pwi-ah-pJl"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zme-eL-FCT">
+                                                <rect key="frame" x="0.0" y="266" width="359" height="30"/>
+                                                <state key="normal" title="Submit"/>
+                                                <connections>
+                                                    <action selector="updateTrip:" destination="o3V-D5-l2B" eventType="touchUpInside" id="nRb-PD-q2g"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AKr-Bt-QpD" firstAttribute="top" secondItem="0fh-zf-AlF" secondAttribute="top" id="EiK-g5-6PV"/>
+                                    <constraint firstAttribute="trailing" secondItem="AKr-Bt-QpD" secondAttribute="trailing" constant="8" id="YQc-a0-fv6"/>
+                                    <constraint firstItem="AKr-Bt-QpD" firstAttribute="width" secondItem="0fh-zf-AlF" secondAttribute="width" constant="-16" id="Zm5-RA-67U"/>
+                                    <constraint firstAttribute="bottom" secondItem="AKr-Bt-QpD" secondAttribute="bottom" constant="8" id="pAD-Bi-9Zk"/>
+                                    <constraint firstItem="AKr-Bt-QpD" firstAttribute="leading" secondItem="0fh-zf-AlF" secondAttribute="leading" constant="8" id="sP0-TU-uu9"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0fh-zf-AlF" firstAttribute="leading" secondItem="Wvc-0O-fuL" secondAttribute="leading" id="CDS-ia-8PL"/>
+                            <constraint firstAttribute="trailing" secondItem="0fh-zf-AlF" secondAttribute="trailing" id="MLu-yS-xsb"/>
+                            <constraint firstAttribute="top" secondItem="0fh-zf-AlF" secondAttribute="top" id="dg5-Sb-Z6K"/>
+                            <constraint firstAttribute="bottom" secondItem="0fh-zf-AlF" secondAttribute="bottom" id="lrA-Zl-ytE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Xb0-qJ-WH7"/>
                     </view>
                     <navigationItem key="navigationItem" id="x4z-6e-nh6"/>
+                    <connections>
+                        <outlet property="destination" destination="lZY-Ve-4Zp" id="7tS-2G-riH"/>
+                        <outlet property="endDate" destination="44d-7e-rMk" id="gkp-A4-a2x"/>
+                        <outlet property="scroll" destination="0fh-zf-AlF" id="wcV-lr-yE7"/>
+                        <outlet property="startDate" destination="zFg-wc-R5R" id="JiS-zz-frS"/>
+                        <outlet property="submit" destination="zme-eL-FCT" id="D9t-pB-Eyg"/>
+                        <outlet property="tripName" destination="F7p-vh-6Xy" id="7xK-Pl-3CX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yW7-Lv-SST" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1190" y="797"/>
+            <point key="canvasLocation" x="1189.5999999999999" y="796.55172413793105"/>
         </scene>
     </scenes>
 </document>
