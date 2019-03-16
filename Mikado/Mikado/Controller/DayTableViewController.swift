@@ -8,37 +8,39 @@
 
 import UIKit
 
+struct DayCellData{
+    let image: UIImage
+    let date: String
+    
+}
 class DayTableViewController: UITableViewController {
     
-    var dates : [Day]?
+  var dayData = [DayCellData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupTrips()
+        setupDays()
         self.navigationItem.title = "Days"
         
         tableView.register(DayCell.self, forCellReuseIdentifier: "dayCell")
         tableView.tableFooterView = UIView()
+        
     }
     
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let dayCell = tableView.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath)
+        let dayCell = tableView.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath) as! DayCell
         
-        let day = dates?[indexPath.row]
-        
-        dayCell.textLabel?.text = day?.title
-        
+        let day = dayData[indexPath.section]
+        dayCell.setDayCell(day)
         return dayCell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = dates?.count {
-            return count
-        }
-        return 0
+        return dayData.count
+       
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -47,9 +49,7 @@ class DayTableViewController: UITableViewController {
     
     // MARK: - Populate the array of trips
     
-    func setupTrips() {
-        let day1 = Day(title: "Day1")
-        let day2 = Day(title: "Day2")
-        dates = [day1, day2]
+    func setupDays() {
+        dayData = [DayCellData.init(image: UIImage(named: "seattle-destination")!, date: "March 15, 2019"), DayCellData.init(image: UIImage(named: "seattle-destination")!, date: "March 16, 2019"), DayCellData.init(image: UIImage(named: "seattle-destination")!, date: "March 17, 2019"), DayCellData.init(image: UIImage(named: "seattle-destination")!, date: "March 18, 2019"), DayCellData.init(image: UIImage(named: "seattle-destination")!, date: "place"),DayCellData.init(image: UIImage(named: "seattle-destination")!, date: "March 19, 2019")]
     }
 }
