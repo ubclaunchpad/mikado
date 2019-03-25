@@ -27,14 +27,15 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
     private var startDatepicker: UIDatePicker?
     private var endDatepicker: UIDatePicker?
     
-    // instantiate a trip object
-//    private var trip: Trip = Trip.init(title: )
+    // initialize a trip object
+    var title_: String = ""
+    var startdate: Date = Date(timeIntervalSinceReferenceDate: -123456789.0)
+    var enddate: Date = Date(timeIntervalSinceReferenceDate: -123456789.0)
+    var destination_ = Place(name: "",coordinates: nil)
+    var days: [Day] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // set the size of the scroll view
-//        scroll.contentSize = self.view.frame.size
         
         //observer of keyboard
         let notificationCenter = NotificationCenter.default
@@ -71,6 +72,9 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
         startDate.text = startDateString
         //trip.startDate = NSDate(dataString: startDateString)
 //        print(trip.startDate)
+        
+        //TODO:
+        //update the startdate variable
         view.endEditing(true)
     }
     
@@ -82,6 +86,9 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
         endDate.text = endDateString
 //        trip.updateEndDate(dateString: endDateString)
 //        print(trip.endDate)
+
+        //TODO:
+        //update the enddate variable
         view.endEditing(true)
     }
     
@@ -89,6 +96,7 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
     @IBAction func updateDes(_ sender: Any) {
 //        trip.destination = destination.text!
 //        print(trip.destination)
+        destination_ = Place(name: destination.text!, coordinates: nil)
         view.endEditing(true)
     }
     
@@ -96,6 +104,7 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
     @IBAction func updateTripName(_ sender: Any) {
 //        trip.title = tripName.text!
 //        print(trip.title)
+        title_ = tripName.text!
         view.endEditing(true)
     }
     
@@ -116,6 +125,7 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func updateTrip(_ sender: UIButton) {
+        //integrate the trip object
     }
     
     
