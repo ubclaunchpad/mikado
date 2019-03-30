@@ -64,6 +64,10 @@ class AddTripViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
+    @IBAction func cancelAddTrip(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     // update start date in our trip object
     @objc func startDateChanged(datepicker:UIDatePicker){
         let formatter = DateFormatter()

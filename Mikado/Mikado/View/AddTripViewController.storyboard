@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P4r-xL-PWN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P4r-xL-PWN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="474" y="797"/>
         </scene>
-        <!--Add Trip View Controller-->
+        <!--Create a New Trip-->
         <scene sceneID="XU8-nf-WoE">
             <objects>
                 <viewController id="o3V-D5-l2B" customClass="AddTripViewController" customModule="Mikado" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AKr-Bt-QpD">
-                                        <rect key="frame" x="8" y="0.0" width="359" height="296"/>
+                                        <rect key="frame" x="8" y="20" width="359" height="296"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DND-29-GNf">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
@@ -96,7 +96,7 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zme-eL-FCT">
                                                 <rect key="frame" x="0.0" y="266" width="359" height="30"/>
-                                                <state key="normal" title="Submit"/>
+                                                <state key="normal" title="Create"/>
                                                 <connections>
                                                     <action selector="updateTrip:" destination="o3V-D5-l2B" eventType="touchUpInside" id="nRb-PD-q2g"/>
                                                 </connections>
@@ -105,7 +105,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="AKr-Bt-QpD" firstAttribute="top" secondItem="0fh-zf-AlF" secondAttribute="top" id="EiK-g5-6PV"/>
+                                    <constraint firstItem="AKr-Bt-QpD" firstAttribute="top" secondItem="0fh-zf-AlF" secondAttribute="top" constant="20" symbolic="YES" id="EiK-g5-6PV"/>
                                     <constraint firstAttribute="trailing" secondItem="AKr-Bt-QpD" secondAttribute="trailing" constant="8" id="YQc-a0-fv6"/>
                                     <constraint firstItem="AKr-Bt-QpD" firstAttribute="width" secondItem="0fh-zf-AlF" secondAttribute="width" constant="-16" id="Zm5-RA-67U"/>
                                     <constraint firstAttribute="bottom" secondItem="AKr-Bt-QpD" secondAttribute="bottom" constant="8" id="pAD-Bi-9Zk"/>
@@ -122,7 +122,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xb0-qJ-WH7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="x4z-6e-nh6"/>
+                    <navigationItem key="navigationItem" title="Create a New Trip" id="x4z-6e-nh6">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Hzg-l7-Zzb">
+                            <connections>
+                                <action selector="cancelAddTrip:" destination="o3V-D5-l2B" id="IdV-4h-3xF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="destination" destination="lZY-Ve-4Zp" id="7tS-2G-riH"/>
                         <outlet property="endDate" destination="44d-7e-rMk" id="gkp-A4-a2x"/>

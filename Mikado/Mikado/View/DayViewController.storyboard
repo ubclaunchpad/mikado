@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XCb-0C-545">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XCb-0C-545">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,18 +13,45 @@
         <!--Events-->
         <scene sceneID="rxU-eO-XKL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yo4-fu-9Da" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Events" id="XCb-0C-545" customClass="DayViewController" customModule="Mikado" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H3K-jy-Apz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vIs-Jq-GDa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dayCell" id="NfL-W0-y0X" customClass="DayCell" customModule="Mikado" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NfL-W0-y0X" id="kAm-rw-9zc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XCb-0C-545" id="73E-83-LkV"/>
+                                    <outlet property="delegate" destination="XCb-0C-545" id="MMt-Dn-nQJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vIs-Jq-GDa" secondAttribute="bottom" id="Oic-Oh-c8X"/>
+                            <constraint firstAttribute="top" secondItem="vIs-Jq-GDa" secondAttribute="top" id="VEC-Eh-pRL"/>
+                            <constraint firstAttribute="trailing" secondItem="vIs-Jq-GDa" secondAttribute="trailing" id="q0K-UR-qbg"/>
+                            <constraint firstItem="vIs-Jq-GDa" firstAttribute="leading" secondItem="leg-eU-0j3" secondAttribute="leading" id="qM5-i3-epQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="leg-eU-0j3"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="vIs-Jq-GDa" id="ss7-hd-yVZ"/>
                         <segue destination="b6I-6r-P87" kind="show" identifier="showEventDetail" id="Dj2-WD-0OR"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yo4-fu-9Da" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2768.8000000000002" y="132.68365817091455"/>
         </scene>

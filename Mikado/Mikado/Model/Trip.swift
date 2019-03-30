@@ -13,5 +13,6 @@ struct Trip {
     var startDate: Date
     var endDate: Date
     var destination: Place
+    var imageString: String
     var days: [Day]
 }

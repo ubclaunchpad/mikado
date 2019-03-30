@@ -10,12 +10,30 @@ import UIKit
 
 class DayViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    var day: Day!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Day of February 20th"
+        setupDataSource()
+        addPullUpController()
+        
+        tableView.register(EventCell.self, forCellReuseIdentifier: "eventCell")
     }
     
+    private func addPullUpController() {
+        guard let pullUpController = UIStoryboard(name: "EventsViewController", bundle: nil).instantiateViewController(withIdentifier: "EventViewController") as? EventViewController else {
+            return
+        }
+        pullUpController.delegate = self
+        
+        addPullUpController(pullUpController, initialStickyPointOffset: 80, animated: true)
+    }
+    
+    private func setupDataSource() {
+        self.tableView.reloadData()
+    }
 
     /*
     // MARK: - Navigation
@@ -27,4 +45,30 @@ class DayViewController: UIViewController {
     }
     */
 
+}
+
+extension DayViewController: UITableViewDataSource {
+    
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let eventCell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath)
+        
+        eventCell.textLabel?.text = day.events[indexPath.row].event.title
+        
+        return eventCell
+    }
+    
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return day.events.count
+    }
+    
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //performSegue(withIdentifier: "showEvent", sender: self)
+    }
+}
+
+extension DayViewController: EventViewControllerDelegate {
+    func didSelect(event: Event) {
+        day.events.append(ScheduledEvent(event: event, beginTime: Date(), endTime: Date()))
+        tableView.insertRows(at: [IndexPath(row: day.events.count - 1, section: 0)], with: .automatic)
+    }
 }

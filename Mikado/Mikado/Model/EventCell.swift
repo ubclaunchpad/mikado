@@ -1,14 +1,14 @@
 //
-//  DayCell.swift
+//  EventCell.swift
 //  Mikado
 //
-//  Created by Aziz Zaynutdinov on 2/10/19.
+//  Created by Aziz Zaynutdinov on 3/9/19.
 //  Copyright © 2019 Aziz Zaynutdinov. All rights reserved.
 //
 
 import UIKit
 
-class DayCell: UITableViewCell {
+class EventCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,8 +23,8 @@ class DayCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        accessoryType = .disclosureIndicator
-//        backgroundColor = .orange
+        
+//        backgroundColor = .red
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -13,6 +13,6 @@ struct Event {
     var location: Place
     var rating: Double
     var description: String
-    var imageURL: URL
-    var suggestedDuration: Range<Double>
+    var imageURL: URL?
+    var suggestedDuration: ClosedRange<Double>
 }
