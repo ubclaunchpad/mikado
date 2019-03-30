@@ -25,6 +25,9 @@
 		87065A9A2211420E00F58185 /* TripCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87065A982211420E00F58185 /* TripCell.xib */; };
 		87065A9D2211422F00F58185 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87065A9B2211422F00F58185 /* DayCell.swift */; };
 		87065A9E2211422F00F58185 /* DayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87065A9C2211422F00F58185 /* DayCell.xib */; };
+		87764BAD223447A3005DCD09 /* PullUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87764BAC223447A3005DCD09 /* PullUpController.swift */; };
+		87764BB222346F1A005DCD09 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87764BB022346F1A005DCD09 /* EventCell.swift */; };
+		87764BB322346F1A005DCD09 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87764BB122346F1A005DCD09 /* EventCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		87065A982211420E00F58185 /* TripCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripCell.xib; sourceTree = "<group>"; };
 		87065A9B2211422F00F58185 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		87065A9C2211422F00F58185 /* DayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayCell.xib; sourceTree = "<group>"; };
+		87764BAC223447A3005DCD09 /* PullUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullUpController.swift; sourceTree = "<group>"; };
+		87764BB022346F1A005DCD09 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		87764BB122346F1A005DCD09 /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EventCell.xib; path = ../Model/EventCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 				87065A682211058200F58185 /* MikadoTests */,
 				87065A732211058200F58185 /* MikadoUITests */,
 				87065A522211058000F58185 /* Products */,
+				E288911937A245DA82400F5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +157,7 @@
 		87065A8C221118DF00F58185 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				87764BAC223447A3005DCD09 /* PullUpController.swift */,
 				87065A86221118CA00F58185 /* TripTableViewController.swift */,
 				5F152E57222B145800F4EF79 /* AddTripViewController.swift */,
 				87065A82221118AF00F58185 /* DayTableViewController.swift */,
@@ -167,6 +175,7 @@
 				87065A9122111D7C00F58185 /* Day.swift */,
 				87065A9322111D8500F58185 /* Event.swift */,
 				5F152E55222B13D000F4EF79 /* TADataSource.swift */,
+				87764BB022346F1A005DCD09 /* EventCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,9 +186,17 @@
 				87065A582211058000F58185 /* Main.storyboard */,
 				87065A5D2211058200F58185 /* LaunchScreen.storyboard */,
 				87065A982211420E00F58185 /* TripCell.xib */,
+				87764BB122346F1A005DCD09 /* EventCell.xib */,
 				87065A9C2211422F00F58185 /* DayCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E288911937A245DA82400F5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +307,7 @@
 				87065A5F2211058200F58185 /* LaunchScreen.storyboard in Resources */,
 				87065A5C2211058200F58185 /* Assets.xcassets in Resources */,
 				87065A9E2211422F00F58185 /* DayCell.xib in Resources */,
+				87764BB322346F1A005DCD09 /* EventCell.xib in Resources */,
 				87065A5A2211058000F58185 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +340,8 @@
 				87065A9222111D7C00F58185 /* Day.swift in Sources */,
 				87065A8B221118DC00F58185 /* EventViewController.swift in Sources */,
 				87065A84221118AF00F58185 /* DayTableViewController.swift in Sources */,
+				87764BB222346F1A005DCD09 /* EventCell.swift in Sources */,
+				87764BAD223447A3005DCD09 /* PullUpController.swift in Sources */,
 				5F152E58222B145800F4EF79 /* AddTripViewController.swift in Sources */,
 				87065A9422111D8500F58185 /* Event.swift in Sources */,
 				87065A88221118CA00F58185 /* TripTableViewController.swift in Sources */,
@@ -535,7 +555,6 @@
 		87065A7D2211058200F58185 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM934V475K;
@@ -547,7 +566,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.MikadoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mikado.app/Mikado";
 			};
@@ -556,7 +575,6 @@
 		87065A7E2211058200F58185 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM934V475K;
@@ -568,7 +586,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.MikadoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mikado.app/Mikado";
 			};
@@ -577,7 +595,6 @@
 		87065A802211058200F58185 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM934V475K;
 				INFOPLIST_FILE = MikadoUITests/Info.plist;
@@ -588,7 +605,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.MikadoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Mikado;
 			};
@@ -597,7 +613,6 @@
 		87065A812211058200F58185 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM934V475K;
 				INFOPLIST_FILE = MikadoUITests/Info.plist;
@@ -608,7 +623,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.azizzaynutdinov.MikadoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Mikado;
 			};

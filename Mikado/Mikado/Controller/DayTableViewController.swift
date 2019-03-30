@@ -8,23 +8,43 @@
 
 import UIKit
 
-class DayTableViewController: UITableViewController {
+class DayTableViewController: UIViewController {
     
-    var dates : [Day]?
+    private var dates : [Day]?
+    
+    @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupDataSource()
         setupTrips()
-        self.navigationItem.title = "Days"
+        addPullUpController()
         
         tableView.register(DayCell.self, forCellReuseIdentifier: "dayCell")
         tableView.tableFooterView = UIView()
     }
     
+    private func addPullUpController() {
+        guard
+            let pullUpController = UIStoryboard(name: "Main", bundle: nil)
+                .instantiateViewController(withIdentifier: "EventViewController") as? EventViewController
+            else { return }
+        
+        addPullUpController(pullUpController, initialStickyPointOffset: 50, animated: true)
+    }
+    
+    private func setupDataSource() {
+        self.tableView.reloadData()
+    }
+    
+}
+    
     // MARK: - Table view data source
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    extension DayTableViewController: UITableViewDataSource {
+    
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let dayCell = tableView.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath)
         
         let day = dates?[indexPath.row]
@@ -34,15 +54,15 @@ class DayTableViewController: UITableViewController {
         return dayCell
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let count = dates?.count {
             return count
         }
         return 0
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showEvent", sender: self)
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //performSegue(withIdentifier: "showEvent", sender: self)
     }
     
     // MARK: - Populate the array of trips

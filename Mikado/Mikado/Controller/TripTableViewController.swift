@@ -20,6 +20,7 @@ class TripTableViewController: UITableViewController {
         
         tableView.register(TripCell.self, forCellReuseIdentifier: "tripCell")
         tableView.tableFooterView = UIView()
+
     }
 
     // MARK: - Table view data source
