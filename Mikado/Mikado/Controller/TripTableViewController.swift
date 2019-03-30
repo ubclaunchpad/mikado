@@ -10,35 +10,47 @@ import UIKit
 
 class TripTableViewController: UITableViewController {
     
-    var trips : [Trip]?
-        
+    var trips : [Trip] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTrips()
         self.navigationItem.title = "Trips"
         
-        tableView.register(TripCell.self, forCellReuseIdentifier: "tripCell")
+        tableView.register(UINib(nibName: "TripCell", bundle: nil), forCellReuseIdentifier: "tripCell")
         tableView.tableFooterView = UIView()
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tripCell = tableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath)
+        let tripCell = tableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath) as! TripCell
         
-        let trip = trips?[indexPath.row]
-
-        tripCell.textLabel?.text = trip?.title
-        
+        let trip = trips[indexPath.section]
+        tripCell.tripName.text = trip.title
+        guard let im = UIImage(named: "seattle-destination") else {
+            return tripCell
+        }
+        tripCell.cityImage.image = im
+        tripCell.coverLayer.frame = tripCell.bounds
         return tripCell
     }
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return trips.count
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = trips?.count {
-            return count
-        }
-        return 0
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20;
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
